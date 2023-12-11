@@ -1,4 +1,4 @@
-#  File: Horrible Tetris.py
+#  File: tetris.py
 
 #  Description: Command prompt game of tetris
 
