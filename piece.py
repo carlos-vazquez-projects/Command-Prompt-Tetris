@@ -1,4 +1,12 @@
-#By Carlos Vazquez on 11-17-22
+#  File: piece.py
+
+#  Description: Piece class used in the tetris.py file
+
+#  Name: Carlos Vazquez
+
+#  Date Created: 10-05-23
+
+#  Date Last Modified: 10-06-23
 
 class Piece():
   def __init__(self,n,x):
