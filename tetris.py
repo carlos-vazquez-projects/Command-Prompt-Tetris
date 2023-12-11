@@ -851,14 +851,17 @@ new_leader = [False, None]
 game_played = False
 
 # read leaderboard file
-f = open("Leaderboard.txt", "r")
-temp = f.read().split(',')
-f.close()
-leader_list = []
-    
-for i in range(0, len(temp), 2):
-    leader_list.append([int(temp[i]), temp[i + 1]])
-
+try:
+    f = open("Leaderboard.txt", "r")
+    temp = f.read().split(',')
+    f.close()
+    leader_list = []
+    for i in range(0, len(temp), 2):
+        leader_list.append([int(temp[i]), temp[i + 1]])
+        
+except FileNotFoundError as err:
+    leader_list = [[5000, 'bob'], [4000, 'blake'], [3000, 'bill'], [2000, 'barbara'], [1000, 'bronson']]
+  
 # display menu, take menu input
 display_title()
 display_menu()
